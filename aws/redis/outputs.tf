@@ -13,7 +13,3 @@ output "cluster_arn" {
 output "replication_group_id" {
   value = module.redis.replication_group_id
 }
-
-output "user_prefix" {
-  value = var.user_prefix
-}
