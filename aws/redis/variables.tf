@@ -11,11 +11,13 @@ variable "name" {
 }
 
 variable "redis_version" {
-  type = string
+  type    = string
+  default = "8.2"
 }
 
 variable "node_type" {
-  type = string
+  type    = string
+  default = "cache.t3.micro"
 }
 
 variable "parameters" {
@@ -45,19 +47,3 @@ variable "tags" {
   default = {}
 }
 
-variable "valkey_family" {
-  type    = string
-  default = "valkey8"
-}
-
-variable "default_user_access_string" {
-  type        = string
-  default     = "on ~* +@all"
-  description = "use off -@all to disable token access and keep only IAM auth"
-}
-
-variable "user_prefix" {
-  type        = string
-  description = "Prefix for splitting users in different clusters. Use cluster name for simplicity."
-  default     = "demo"
-}

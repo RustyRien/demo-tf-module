@@ -14,7 +14,7 @@ variable "subnet_ids" {
 
 variable "engine_version" {
   type    = string
-  default = "8.0"
+  default = "8.2"
 }
 
 variable "valkey_family" {
@@ -54,12 +54,13 @@ variable "tags" {
 variable "default_user_access_string" {
   type        = string
   description = "Default user access string."
-  default     = "off -@all"
+  default     = "on ~* +@all"
 }
 
 variable "user_prefix" {
   type        = string
   description = "Prefix for splitting users in different clusters"
+  default     = "demo"
 }
 
 variable "port" {
